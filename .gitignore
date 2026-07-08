@@ -1,0 +1,7 @@
+# Never track credentials or local-only material in the public tap.
+*.pem
+*.key
+id_ed25519*
+id_rsa*
+.env
+.DS_Store
