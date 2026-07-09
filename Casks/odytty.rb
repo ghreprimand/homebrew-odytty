@@ -12,8 +12,9 @@
 # involved), so macOS quarantines the download and Gatekeeper would block the
 # first launch. The postflight below clears the quarantine attribute from the
 # installed app so it launches cleanly, which is the same one-time step a user
-# would otherwise run by hand. Notarization would remove the need for it. Intel
-# Macs use the source-build formula instead.
+# would otherwise run by hand; the caveats disclose that clearance at install
+# time. Notarization would remove the need for it. Intel Macs use the
+# source-build formula instead.
 #
 # The `sha256` below is a placeholder until the first release that publishes
 # `odytty-<version>-macos-arm64.zip`; the auto-bump fills the real checksum.
@@ -41,4 +42,15 @@ cask "odytty" do
                    args: ["-r", "-d", "com.apple.quarantine", "#{appdir}/OdyTTY.app"],
                    must_succeed: false
   end
+
+  caveats <<~EOS
+    OdyTTY.app is ad-hoc signed but not notarized. To let it launch without a
+    Gatekeeper "unverified developer" prompt, this cask has cleared the
+    quarantine attribute (com.apple.quarantine) from the installed app on your
+    behalf. That is the same one-time step you would otherwise run by hand:
+
+      xattr -dr com.apple.quarantine /Applications/OdyTTY.app
+
+    Notarization through the Apple Developer Program would remove the need for it.
+  EOS
 end
