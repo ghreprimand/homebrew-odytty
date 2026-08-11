@@ -19,8 +19,8 @@
 # macOS release leg landed afterward), so the auto-bump fills the real checksum
 # on the first release that publishes `odytty-<version>-macos-arm64.zip`.
 cask "odytty" do
-  version "0.9.8"
-  sha256 "8b1abd0ef63d9905a53dff4469a0b575dd847c45f3f704df8f9bce1ab2eca2f2"
+  version "0.10.0"
+  sha256 "4500c52cff2ba4d2214a976ba19c5dbab1d8f90c2a932f6d35557f07334fa8d6"
 
   url "https://github.com/ghreprimand/odytty/releases/download/v#{version}/odytty-#{version}-macos-arm64.zip"
   name "OdyTTY"
