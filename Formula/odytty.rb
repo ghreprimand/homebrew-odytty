@@ -14,8 +14,8 @@
 class Odytty < Formula
   desc "Reliable, GPU-rendered terminal emulator with an OdysseyOS visual identity"
   homepage "https://github.com/ghreprimand/odytty"
-  url "https://github.com/ghreprimand/odytty/releases/download/v0.16.0/odytty-0.16.0.tar.gz"
-  sha256 "d37556443ea6a2b6a28d01392f41a4ffd14822b13de90cc9986e8a0f369b1726"
+  url "https://github.com/ghreprimand/odytty/releases/download/v0.16.1/odytty-0.16.1.tar.gz"
+  sha256 "0c97fcdde64dedb071bc80dfb4f715ee0b235db2ee08cad4de7ee61dcfbbff79"
   license "GPL-3.0-only"
 
   depends_on "rust" => :build
