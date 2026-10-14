@@ -5,7 +5,7 @@
 # .github/workflows/release.yml stamps the `url` version and `sha256` from the
 # published release, then pushes the updated formula (and the cask) to the tap.
 #
-# This builds the CLI binary from the published GitHub release source tarball —
+# This builds the CLI binary from the published GitHub release source tarball -
 # the same `git archive` tarball the AUR package and the Release workflow use.
 # A locally compiled binary is never quarantined, so it launches without a
 # Gatekeeper warning on any supported macOS (including Intel), which is why the
@@ -14,8 +14,8 @@
 class Odytty < Formula
   desc "Reliable, GPU-rendered terminal emulator with an OdysseyOS visual identity"
   homepage "https://github.com/ghreprimand/odytty"
-  url "https://github.com/ghreprimand/odytty/releases/download/v0.16.1/odytty-0.16.1.tar.gz"
-  sha256 "0c97fcdde64dedb071bc80dfb4f715ee0b235db2ee08cad4de7ee61dcfbbff79"
+  url "https://github.com/ghreprimand/odytty/releases/download/v0.17.0/odytty-0.17.0.tar.gz"
+  sha256 "a45d47fea9bd7934029d331ebafc20cfa8217b8da26245da290987a2b26272f1"
   license "GPL-3.0-only"
 
   depends_on "rust" => :build

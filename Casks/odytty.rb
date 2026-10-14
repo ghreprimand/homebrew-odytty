@@ -4,7 +4,7 @@
 # copy is the upstream template. On each release tag the `homebrew` job in
 # .github/workflows/release.yml stamps `version` and `sha256` from the published
 # release, then pushes the updated cask (and the source-build formula) to the
-# tap — the same pattern the `scoop` and `aur` jobs use for their channels.
+# tap - the same pattern the `scoop` and `aur` jobs use for their channels.
 #
 # The cask installs the prebuilt, ad-hoc-signed `OdyTTY.app` (Apple Silicon /
 # arm64) that the release workflow's macOS leg produces. The app is ad-hoc
@@ -19,8 +19,8 @@
 # macOS release leg landed afterward), so the auto-bump fills the real checksum
 # on the first release that publishes `odytty-<version>-macos-arm64.zip`.
 cask "odytty" do
-  version "0.16.1"
-  sha256 "9e713427900f61b5cafd9ed5d0c74b90e1838b542986c9159baddc08a73ed001"
+  version "0.17.0"
+  sha256 "aa627b78eeaf9bc91f1d40225786ce028a5b034a9b97ebb59f2de835fcac8b20"
 
   url "https://github.com/ghreprimand/odytty/releases/download/v#{version}/odytty-#{version}-macos-arm64.zip"
   name "OdyTTY"
